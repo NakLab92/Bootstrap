@@ -14,26 +14,25 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 </head>
 <body>
-    <button class="btn btn-info" data-toggle="modal" data-target="#myModal">Pop-up window</button>
-    <div id="myModal" class="modal fade" tabindex="-1">
-        <!--<div class="modal-dialog">-->
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button class="close" data-dismiss="modal">x</button>
-                    <h4 class="modal-title">Window title</h4>
-                </div>
-                <div class="modal-body">Some text of the notice</div>
-                <div class="modal-footer">
-                    <button class="btn btn-danger" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
+    <br><br>
+    <div class="container">
+        <a href="#" data-toggle="tooltip" title="Something did not work ?">Hover over</a><br>
+        <button data-toggle="tooltip" title="Button" data-placement="right" class="btn btn-success">Hover over</button><br>
+        <a href="#" data-toggle="tooltip" title="Something did not work ?" data-placement="left">Hover over</a><br>
+        <a href="#" data-toggle="tooltip" title="Something did not work ?" data-placement="bottom">Hover over</a><br>
     </div>
+
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready (function () {
+            $('[data-toggle="tooltip"]').tooltip();
+    //            $('a[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 </body>
 </html>
